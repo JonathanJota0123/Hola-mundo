@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Iniciar Sesión - PsychoWeb</title>
+    <link rel="stylesheet" href="sign-in.css" />
+  </head>
+  <body>
+    <header>
+      <nav>
+        <ul>
+          <li id="titulo">
+            <a href="index.html">PsychoWeb</a>
+          </li>
+          <li class="barra">
+            <a href="register.html">Registrate</a>
+          </li>
+        </ul>
+      </nav>
+    </header>
+
+    <main>
+      <section class="sign-in-container">
+        <h2>Inicia Sesión</h2>
+        <form id="sign-in-form">
+          <label for="email">Correo electrónico</label>
+          <input type="email" id="email" name="email" required />
+
+          <label for="password">Contraseña</label>
+          <input type="password" id="password" name="password" required />
+
+          <button type="submit">Entrar</button>
+        </form>
+        <p class="register-link">
+          ¿No tienes cuenta? <a href="register.html">Regístrate aquí</a>
+        </p>
+      </section>
+    </main>
+
+    <footer>
+      <p>&copy; Sitio completamente confiable y legalizado por certificado</p>
+    </footer>
+
+    <script>
+      const form = document.getElementById('sign-in-form');
+      form.addEventListener('submit', function (event) {
+        event.preventDefault();
+
+        const email = form.email.value.trim();
+        const password = form.password.value.trim();
+
+        if (!email || !password) {
+          alert('Por favor completa todos los campos');
+          return;
+        }
+        alert('Iniciate sesion :v');
+        form.reset();
+      });
+    </script>
+  </body>
+</html>
