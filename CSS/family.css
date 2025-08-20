@@ -15,7 +15,7 @@ body{
 header{
     width: 100%;
     height: 70px;
-    background: rgb(255, 32, 107);
+    background: rgb(12, 226, 12);
     position: fixed;
 }
 .logo{
@@ -43,8 +43,8 @@ nav a{
     font-family: Poppins;
     color: white;
 }
-.banner-area{
-    background-image: url(/image/Pareja.png);
+.banner{
+    background-image: url(/image/familia.png);
     background-size: cover;
     background-position: center center;
     top: 100px;
@@ -52,7 +52,7 @@ nav a{
     width: 100%;
     position: fixed;
 }
-.banner-area:after{
+.banner:after{
     content: '';
     position: absolute;
     top: 0;
@@ -60,11 +60,11 @@ nav a{
     display: block;
     width: 100%;
     height: 100%;
-    background: rgba(236, 54, 30, 0.829);
+    background: rgb(6, 70, 6);
     opacity: .3;
     z-index: -1;
 }
-.banner-area h1{
+.banner h1{
     padding-top: 8%;
     font-size: 64px;
     color: black;
