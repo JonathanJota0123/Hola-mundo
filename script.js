@@ -12,7 +12,7 @@ const terapias = [
   {
     tipo: "Terapia en familia",
     descripcion: "La union como fuerza sanadora",
-    link: "/HTML/Services-parents.html",
+    link: "/HTML/services-family.html",
   },
 ];
 
@@ -25,8 +25,30 @@ terapias.forEach((t) => {
             <div class="card-body">
                <h5 class="card-title">${t.tipo}</h5>
               <p class="card-text">${t.descripcion}</p>
-              <a ${t.link} class="btn btn-primary">Ver mas</a>
+              <a href="${t.link}" class="btn btn-primary">Ver mas</a>
             </div>
           </div>`;
   container.innerHTML += card;
+});
+
+const logged = [
+  {
+    tipo: "Registrate",
+    link: "/HTML/register.html",
+  },
+  {
+    tipo: "Inicia Sesion",
+    link: "/HTML/Sign-in.html",
+  },
+];
+
+const container2 = document.querySelector("#log-container");
+
+logged.forEach((s) => {
+  const card2 = `
+              <li class="nav-item">
+                <a class="nav-link" href="${s.link}">${s.tipo}</a>
+              </li>
+            `;
+  container2.innerHTML += card2;
 });
